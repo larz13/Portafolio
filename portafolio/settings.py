@@ -81,6 +81,10 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
@@ -131,5 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-ALLOWED_HOSTS = ['portafolio-7001.onrender.com']
+ALLOWED_HOSTS = ['portafolio-7001.onrender.com','127.0.0.1']
 print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
