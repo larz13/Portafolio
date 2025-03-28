@@ -132,3 +132,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ALLOWED_HOSTS = ['portafolio-7001.onrender.com']
+print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
