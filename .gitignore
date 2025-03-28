@@ -1,0 +1,17 @@
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de base de datos SQLite (si usas SQLite)
+db.sqlite3
+
+# Ignorar migraciones de Django compiladas
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar configuraciones de IDEs
+.vscode/
+.idea/

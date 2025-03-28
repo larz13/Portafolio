@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="container mt-5">
+    <h1 class="text-start titulo-portafolio">{{ project.title }}</h1>
+    <img src="{{ project.image.url }}" class="img-fluid mx-auto d-block my-4" alt="{{ project.titulo }}">
+    <p><span class="titulo-portafolio">Descripción: </span>{{ project.description }}</p>
+    <p><span class="titulo-portafolio">Tecnologías utilizadas: </span>{{ project.technologies }}</p>
+    <a href="{% url 'project_list' %}" class="btn btn-secondary">Mis Proyectos</a>
+    <a href="{{ project.link }}" class="btn custom-btn" target="_blank">Ver Repositorio</a>
+</section>
+{% endblock %}

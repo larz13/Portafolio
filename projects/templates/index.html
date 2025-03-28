@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<h1 class="text-center mb-4 titulo-portafolio">Mis Proyectos</h1>
+
+
+<div class="row">
+    {% for project in projects %}
+    <div class="col-md-4">
+
+        <div  class="card mb-4 shadow-sm custom-card">
+            <a style="text-decoration: none;" href="{% url 'project_detail' project.id %}">
+                <img src=" {{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                <div class="card-body">
+                    <h5 class="card-title text-white">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+<div class="text-center m-4">
+    <a href="/" class="btn custom-btn btn-lg">Volver al Inicio</a>
+</div>
+{% endblock %}

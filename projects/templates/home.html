@@ -1,0 +1,73 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="text-center">
+    <h1>Bienvenido a mi <span class="titulo-portafolio">Portafolio</span></h1>
+    <div class="profile-container">
+        <img src="media\projects\perfil.jpg" alt="Mi Foto" class="profile-image">
+    </div>
+
+    <p class="lead">
+        Hola👋, mi nombre es Luis Rodriguez <strong><em>"Larz"</em></strong>. Soy un <strong>Ingeniero de Sistemas</strong> apasionado por el <strong>desarrollo de software</strong>,
+        enfocado principalmente en el desarrollo backend con <strong>Python</strong> y
+        <strong>Django</strong>. Sin embargo, no soy ajeno a incursionar en otros lenguajes de programación, frameworks
+        y/o temas del frontend. Me caracterizo por mi
+        <strong>mentalidad orientada a resultados</strong>, <strong>rápida capacidad de aprendizaje</strong> y un fuerte
+        compromiso con la <strong>excelencia técnica</strong>.
+
+    </p>
+
+    <p>
+        💡 Listo para construir soluciones escalables y de alto impacto con Django! 🚀
+    </p>
+</section>
+
+<hr>
+
+<h2 class="titulo-portafolio text-center">Proyectos</h2>
+<section id="projects" class="text-center">
+
+    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for project in projects %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <a href="{% url 'project_detail' project.id %}">
+                    <img src="{{ project.image.url }}" class="d-block w-100 project-img" alt="{{ project.titulo }}">
+
+                    <div class="carousel-caption">
+                        <h5 class="m-0">{{ project.title }}</h5>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<hr>
+<h2 class="titulo-portafolio text-center m-0">Skills</h2>
+<section id="skills" class="text-center">
+    <div class="skills-container">
+        <div class="skill"><i class="devicon-python-plain"></i> Python</div>
+        <div class="skill"><i class="devicon-php-plain"></i> PHP</div>
+        <div class="skill"><i class="devicon-django-plain"></i> Django</div>
+        <div class="skill"><i class="devicon-djangorest-plain"></i> Django REST Framework</div>
+        <div class="skill"><i class="devicon-bootstrap-plain"></i> Bootstrap</div>
+        <div class="skill"><i class="devicon-html5-plain"></i> HTML</div>
+        <div class="skill"><i class="devicon-css3-plain"></i> CSS</div>
+        <div class="skill"><i class="devicon-git-plain"></i> Git</div>
+        <div class="skill"><i class="devicon-mysql-plain"></i> MySQL</div>
+        <div class="skill"><i class="devicon-postgresql-plain"></i> PostgreSQL</div>
+    </div>
+</section>
+
+<section id="projects" class="text-center">
+    <a href="/projects/" class="btn custom-btn btn-lg">Ver todos mis proyectos</a>
+</section>
+{% endblock %}
