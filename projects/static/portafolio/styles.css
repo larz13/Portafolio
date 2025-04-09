@@ -204,7 +204,7 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 123, 255, 0.5);
 }
 
-.card-description {
+.card .card-description {
     max-height: 100px !important; /* Ajusta este valor según tu diseño */
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -213,11 +213,3 @@ footer {
     -webkit-box-orient: vertical !important;
 }
 
-.card-text:last-child {
-    max-height: 100px !important; /* Ajusta este valor según tu diseño */
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3 !important;
-    -webkit-box-orient: vertical !important;
-}
