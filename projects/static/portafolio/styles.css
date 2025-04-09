@@ -212,3 +212,12 @@ footer {
     -webkit-line-clamp: 3 !important;
     -webkit-box-orient: vertical !important;
 }
+
+.card-text:last-child {
+    max-height: 100px !important; /* Ajusta este valor según tu diseño */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+}
