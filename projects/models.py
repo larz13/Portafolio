@@ -1,9 +1,11 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to="projects/")
+    imagen = CloudinaryField('image')  # Se usa CloudinaryField en vez de ImageField
     link = models.URLField(blank=True)
     technologies = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
