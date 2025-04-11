@@ -7,7 +7,8 @@ class Project(models.Model):
     description = models.TextField()
     imagen = CloudinaryField('image')  # Se usa CloudinaryField en vez de ImageField
     link = models.URLField(blank=True)
-    technologies = models.CharField(max_length=250)
+    backend = models.CharField(max_length=200, blank=True)
+    frontend = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
