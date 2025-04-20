@@ -115,10 +115,15 @@ footer {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#projects .btn:hover {
+.custom-btn:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(100, 255, 218, 0.5);
 }
+
+/* #projects .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(100, 255, 218, 0.5);
+} */
 
 #contact-form {
     background: #112240 !important;
