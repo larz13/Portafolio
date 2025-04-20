@@ -29,15 +29,6 @@ body {
     flex: 1;
 }
 
-.btn-custom {
-    background: #4fa3d1;
-    color: #0a192f;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 20px;
-    border: none;
-}
-
 footer {
     background: #112240;
     text-align: center;
